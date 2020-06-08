@@ -31,6 +31,10 @@
           <input type="text" class="form-control" id="locono" name="locono" value="{{ $locodetails->locono }}">
         </div>
         <div class="form-group">
+          <label for="homeshed">Homeshed:</label>
+          <input type="text" class="form-control" id="homeshed" name="homeshed" value="{{ $locodetails->homeshed }}">
+        </div>
+        <div class="form-group">
           <label for="title">Trainno:</label>
           <input type="text" class="form-control" id="trainno" name="trainno" value="{{ $locodetails->trainno }}">
         </div>
@@ -43,16 +47,16 @@
           <input type="text" class="form-control" id="destination" name="destination" value="{{ $locodetails->destination }}">
         </div>
         <div class="form-group">
-          <label for="title">date:</label>
-          <input type="date" class="form-control" id="date" name="date" value="{{ $locodetails->date }}">
+          <label for="ddate">Dest Date:</label>
+          <input type="date" class="form-control" id="ddate" name="ddate" value="{{ $locodetails->ddate }}">
         </div>
         <div class="form-group">
-          <label for="title">Time:</label>
+          <label for="title">Dest Time:</label>
           <input type="time" class="form-control" id="time" name="time" value="{{ $locodetails->time }}">
         </div>
         <div class="form-group">
           <label for="title">Enteredby:</label>
-          <input type="text" class="form-control" id="enteredby" name="enteredby" value="{{ $locodetails->locono }}">
+          <input type="text" class="form-control" id="enteredby" name="enteredby" value="{{ $locodetails->enteredby }}">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>

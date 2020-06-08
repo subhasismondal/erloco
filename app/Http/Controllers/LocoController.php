@@ -17,10 +17,16 @@ class LocoController extends Controller
      */
     public function index()
     {
-        $userId = Auth::user()->id;
-
+        $division = Auth::user()->division;
+        $role = Auth::user()->role;
         //$locodetails = Loco::all();
-        $locodetails = Loco::paginate(10);
+        if($role == 'ADMIN'){
+
+            $locodetails = Loco::paginate(15);
+        }else{
+            $locodetails = Loco::where(['division' => $division])->paginate(15);
+        }
+
         return view('loco.list', ['locodetails' => $locodetails]);
     }
 
@@ -31,7 +37,9 @@ class LocoController extends Controller
      */
     public function create()
     {
-        return view('loco.add');
+        $user = Auth::user();
+
+        return view('loco.add',['user' => $user]);
     }
 
     /**
@@ -43,15 +51,20 @@ class LocoController extends Controller
     public function store(Request $request)
     {
         $userId = Auth::user()->id;
+        $locono = $request->locono;
+        $trainno = $request->trainno;
+        $ddate = $request->ddate;
+        $time = $request->time;
         $input = $request->input();
         $input['user_id'] = $userId;
         $locodetails = Loco::create($input);
+        $id = Loco::where(['locono' =>$locono ])->value('id');
         if ($locodetails) {
             $request->session()->flash('success', 'Locodetails successfully added');
         } else {
             $request->session()->flash('error', 'Oops something went wrong, Locodetails not saved');
         }
-        return redirect('loco');
+        return view('loco.view',['locodetails' => $locodetails]);
     }
 
     /**
@@ -65,7 +78,7 @@ class LocoController extends Controller
         $userId = Auth::user()->id;
         $locodetails = Loco::where(['id' => $id])->first();
         if (!$locodetails) {
-            return redirect('loco')->with('error', 'Locodetails not found');
+            return redirect('loco')->with('error', 'Locodetails not found! Hari Om');
         }
         return view('loco.view', ['locodetails' => $locodetails]);
     }

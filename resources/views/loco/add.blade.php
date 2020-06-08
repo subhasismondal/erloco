@@ -63,12 +63,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="title">Enteredby:</label>
-                    <input type="text" class="form-control" id="enteredby" name="enteredby">
+                    <label for="title"></label>
+                    <input type="hidden" class="form-control" id="enteredby" name="enteredby" value="{{ $user->name }}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="division">Division:</label>
-                    <input type="text" class="form-control" id="division" name="division">
+                    <label for="division"></label>
+                    <input type="hidden" class="form-control" id="division" name="division" value="{{ $user->division }}" readonly>
                 </div>
                 <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary">Submit</button>
             </form>
