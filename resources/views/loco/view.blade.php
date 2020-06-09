@@ -48,6 +48,9 @@
                 <strong>Entered By</strong> {{ $locodetails->enteredby }}
             </div>
             <br>
+            <div class="float-centre">
+    			<a href="{{ route('loco.index') }}" class="btn btn-primary">Ok</a>
+    		</div>
         </div>
     </div>
 </div>
