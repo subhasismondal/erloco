@@ -55,7 +55,12 @@
                 </div>
                 <div class="form-group">
                     <label for="inspection">Inspection:</label>
-                    <input type="inspection" class="form-control" id="inspection" name="inspection">
+                    <select name="inspection" id="inspection">
+                        <option value="IA">IA</option>
+                        <option value="IB">IB</option>
+                        <option value="IC">IC</option>
+                        <option value="TI">TI</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="idate">Inspection Date:</label>
