@@ -32,19 +32,19 @@
         </div>
         <div class="form-group">
           <label for="homeshed">Homeshed:</label>
-          <input type="text" class="form-control" id="homeshed" name="homeshed" value="{{ $locodetails->homeshed }}">
+          <input type="text" class="form-control text-uppercase" id="homeshed" name="homeshed" value="{{ $locodetails->homeshed }}">
         </div>
         <div class="form-group">
           <label for="title">Trainno:</label>
-          <input type="text" class="form-control" id="trainno" name="trainno" value="{{ $locodetails->trainno }}">
+          <input type="text" class="form-control text-uppercase" id="trainno" name="trainno" value="{{ $locodetails->trainno }}">
         </div>
         <div class="form-group">
           <label for="title">Source:</label>
-          <input type="text" class="form-control" id="source" name="source" value="{{ $locodetails->source }}">
+          <input type="text" class="form-control text-uppercase" id="source" name="source" value="{{ $locodetails->source }}">
         </div>
         <div class="form-group">
-          <label for="title">destination:</label>
-          <input type="text" class="form-control" id="destination" name="destination" value="{{ $locodetails->destination }}">
+          <label for="title">Destination:</label>
+          <input type="text" class="form-control text-uppercase" id="destination" name="destination" value="{{ $locodetails->destination }}">
         </div>
         <div class="form-group">
           <label for="ddate">Dest Date:</label>

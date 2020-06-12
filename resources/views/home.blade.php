@@ -84,6 +84,11 @@
                 <td>{{$date}}</td>
                 <td>{{$totalcountASN}}</td>
             </tr>
+            <tr>
+                <td>SDAH</td>
+                <td>{{$date}}</td>
+                <td>{{$totalcountSDAH}}</td>
+            </tr>
         </table>
         <br/>
         <br/>

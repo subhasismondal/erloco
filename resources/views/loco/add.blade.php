@@ -31,19 +31,19 @@
                 </div>
                 <div class="form-group">
                     <label for="homeshed">Homeshed:</label>
-                    <input type="text" class="form-control" id="homeshed" name="homeshed">
+                    <input type="text" class="form-control text-uppercase" id="homeshed" name="homeshed">
                 </div>
                 <div class="form-group">
                     <label for="trainno">Trainno:</label>
-                    <input type="text" class="form-control" id="trainno" name="trainno">
+                    <input type="text" class="form-control text-uppercase" id="trainno" name="trainno">
                 </div>
                 <div class="form-group">
                     <label for="source">Source:</label>
-                    <input type="text" class="form-control" id="source" name="source">
+                    <input type="text" class="form-control text-uppercase" id="source" name="source">
                 </div>
                 <div class="form-group">
                     <label for="destination">Destination:</label>
-                    <input type="text" class="form-control" id="destination" name="destination">
+                    <input type="text" class="form-control text-uppercase" id="destination" name="destination">
                 </div>
                 <div class="form-group">
                     <label for="ddate">Dept date:</label>
