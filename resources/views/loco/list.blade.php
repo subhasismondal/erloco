@@ -1,8 +1,18 @@
 @extends('layouts.afterlogin')
 @section('content')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#mytable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 <script>
     function printPDF() {
         var pdf = new jsPDF('p', 'pt', 'letter');
@@ -23,6 +33,7 @@
         </div>
         <div class="col-md-6">
             <div class="float-right">
+               <input id="myInput" type="text" placeholder="Search..">
                 <a href="{{ route('loco.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add Locodeatils</a>
                 <button onclick="printPDF()">Print as PDF</button>
             </div>
@@ -55,7 +66,7 @@
                         <th>Entered By</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="mytable">
                     @forelse ($locodetails as $locodetail)
                     <tr>
                         <td>{{ $locodetail->locono }}</td>

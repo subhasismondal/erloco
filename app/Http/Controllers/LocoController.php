@@ -149,4 +149,9 @@ class LocoController extends Controller
     }
     return redirect('loco')->with($respStatus, $respMsg);
     }
-}
+
+    public function search(Request $request)
+              {
+
+                    }
+                }
