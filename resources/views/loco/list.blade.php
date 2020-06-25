@@ -150,6 +150,5 @@ $(document).ready( function () {
 
         </div>
     </div>
-    {!! $locodetails->appends(Request::all())->links() !!}
 </div>
 @endsection
